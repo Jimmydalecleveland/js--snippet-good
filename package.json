@@ -1,0 +1,29 @@
+{
+  "name": "js--snippet-all-the-things",
+  "displayName": "JS - Snippet all the things",
+  "description": "A collection of snippets the way I want them to be. (Intended for personal use)",
+  "version": "0.0.1",
+  "publisher": "jimmydc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jimmydalecleveland/vscode-js--snippet-all-the-things"
+  },
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
