@@ -16,7 +16,7 @@ A collection of customized snippets intended for personal use. I've gathered and
 
 ---
 
-#### `clc` &ndash; console log
+#### `clc` &ndash; console log with color
 _note:_ cursor starts at your message, first tab goes to color, third tab goes to the position after the css string, so you can add additional variables to log.
 
 `console.log('%cYourTextHere', 'color: cornflowerblue;')`
@@ -82,3 +82,7 @@ export default Module
 ### 0.0.1
 
 Initial release. Just a few snippets to start with.
+
+### 0.1.0
+
+Add console log snippets
