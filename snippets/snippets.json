@@ -1,4 +1,12 @@
 {
+  "console log": {
+    "prefix": "cl",
+    "body": "console.log($1)"
+  },
+  "console log with color": {
+    "prefix": "clc",
+    "body": "console.log('%c$1', 'color: ${2:cornflowerblue};'$3)"
+  },
   "import module": {
     "prefix": "imp",
     "body": "import ${2:moduleName} from '${1:module}'$0"

@@ -11,20 +11,29 @@ A collection of customized snippets intended for personal use. I've gathered and
 
 ## Snippets
 
-#### `imp` - import module
+#### `cl` &ndash; console log
+`console.log()`
 
+---
+
+#### `clc` &ndash; console log
+_note:_ cursor starts at your message, first tab goes to color, third tab goes to the position after the css string, so you can add additional variables to log.
+
+`console.log('%cYourTextHere', 'color: cornflowerblue;')`
+
+---
+
+#### `imp` &ndash; import module
 `import module from 'module'`
 
 ---
 
 #### `imd` &ndash; import module destructured
-
 `import { moduleName } from 'module'`
 
 ---
 
 #### `imrpc` &ndash; import React, PureComponent
-
 `import React, { PureComponent } from 'react'`
 
 ---
