@@ -1,21 +1,21 @@
 {
-  "import": {
+  "import module": {
     "prefix": "imp",
     "body": "import ${2:moduleName} from '${1:module}'$0"
   },
-  "import--destructed": {
+  "import module destructured": {
     "prefix": "imd",
     "body": "import { $2 } from '${1:module}'$0"
   },
-  "import--react-pure-component": {
+  "import React, PureComponent": {
     "prefix": "imrpc",
     "body": "import React, { PureComponent } from 'react'"
   },
-  "export": {
+  "export default module": {
     "prefix": "exp",
     "body": "export default $1$0"
   },
-  "react-class-with-export-after": {
+  "React, Component class with export after": {
     "prefix": "rce",
     "body": [
       "import React, { Component } from 'react'",
@@ -35,15 +35,15 @@
     ],
     "description": "Creates a React component class with export after the declaration"
   },
-  "reactFunctionalExportComponent": {
+  "React stateless functional component": {
     "prefix": "rse",
     "body": [
       "import React from 'react'",
       "",
-      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
       "  return (",
       "    <div>",
-      "      $2",
+      "      $3",
       "    </div>",
       "  )",
       "}",
@@ -53,7 +53,7 @@
     ],
     "description": "React Stateless Functional Component with export after declaration"
   },
-  "react-component-did-mount-log": {
+  "React componentDidMount with log": {
     "prefix": "cdml",
     "body": [
       "componentDidMount() {",
@@ -61,7 +61,7 @@
       "}"
     ]
   },
-  "react-component-did-mount-log--with-color": {
+  "React componentDidMount with log (color)": {
     "prefix": "cdmlc",
     "body": [
       "componentDidMount() {",

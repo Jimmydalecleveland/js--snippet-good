@@ -4,6 +4,7 @@
   "description": "A collection of Javascript snippets the way I want them to be. (Intended for personal use)",
   "version": "0.0.1",
   "publisher": "jimmydc",
+  "icon": "images/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/Jimmydalecleveland/js--snippet-good.git"
