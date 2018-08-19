@@ -1,4 +1,4 @@
-# js--snippet-all-the-things README
+# JS - Snippet Good!
 
 ## Features
 

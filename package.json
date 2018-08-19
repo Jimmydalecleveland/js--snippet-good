@@ -1,12 +1,12 @@
 {
-  "name": "js--snippet-all-the-things",
-  "displayName": "JS - Snippet all the things",
-  "description": "A collection of snippets the way I want them to be. (Intended for personal use)",
+  "name": "js--snippet-good",
+  "displayName": "JS - Snippet Good!",
+  "description": "A collection of Javascript snippets the way I want them to be. (Intended for personal use)",
   "version": "0.0.1",
   "publisher": "jimmydc",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jimmydalecleveland/vscode-js--snippet-all-the-things"
+    "url": "https://github.com/Jimmydalecleveland/js--snippet-good.git"
   },
   "engines": {
     "vscode": "^1.5.0"
