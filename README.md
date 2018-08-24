@@ -23,6 +23,17 @@ _note:_ cursor starts at your message, first tab goes to color, third tab goes t
 
 ---
 
+#### `clg` &ndash; console log group
+_note:_ the string passed to `.group` and `.groupEnd` should be the same
+
+```js
+  console.group('Group Name')
+    console.log('I am in the group!')
+  console.groupEnd('Group Name')
+```
+
+---
+
 #### `imp` &ndash; import module
 `import module from 'module'`
 
@@ -75,6 +86,62 @@ const Module = () => {
 export default Module 
 ```
 ---
+
+#### `cdu` &ndash; React: componentDidUpdate
+```js
+componentDidUpdate(prevProps, prevState) {
+
+}
+```
+
+---
+
+#### `cdm` &ndash; React: componentDidMount
+```js
+componentDidMount() {
+
+}
+```
+
+---
+
+#### `cdml` &ndash; React: componentDidMount with log
+```js
+componentDidMount() {
+  console.log('Module Mounted')
+}
+```
+
+---
+
+#### `cdmlc` &ndash; React: componentDidMount with log (color)
+```js
+componentDidMount() {
+  console.log('%cModule Mounted', 'color: cornflowerblue;')
+}
+```
+
+---
+
+#### PropType snippets:
+| Prefix | Output |
+| ------ | ------ |
+| `pta`  | PropTypes.array |
+| `ptar` | PropType.array.isRequired |
+| `ptb`  | PropType.bool |
+| `ptbr`  | PropType.bool.isRequired |
+| `ptel`  | PropType.element |
+| `ptelr`  | PropType.element.isRequired |
+| `ptf`  | PropType.func |
+| `ptfr`  | PropType.func.isRequired |
+| `ptnd`  | PropType.node |
+| `ptndr`  | PropType.node.isRequired |
+| `ptn`  | PropType.number |
+| `ptnr`  | PropType.number.isRequired |
+| `pto`  | PropType.object |
+| `ptor`  | PropType.object.isRequired |
+| `pts`  | PropType.string |
+| `ptsr`  | PropType.string.isRequired |
 ---
 
 ## Release Notes
@@ -86,3 +153,7 @@ Initial release. Just a few snippets to start with.
 ### 0.1.0
 
 Add console log snippets
+
+### 0.2.0
+
+Add console.group, React lifecycle methods, and PropTypes

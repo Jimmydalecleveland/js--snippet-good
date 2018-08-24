@@ -7,6 +7,14 @@
     "prefix": "clc",
     "body": "console.log('%c$1', 'color: ${2:cornflowerblue};'$3)"
   },
+  "console log group": {
+    "prefix": "clg",
+    "body": [
+      "console.group('$1')",
+      "\tconsole.log($2)",
+      "console.groupEnd('$1')"
+    ]
+  },
   "import module": {
     "prefix": "imp",
     "body": "import ${2:moduleName} from '${1:module}'$0"
@@ -23,19 +31,19 @@
     "prefix": "exp",
     "body": "export default $1$0"
   },
-  "React, Component class with export after": {
+  "React: Component class with export after": {
     "prefix": "rce",
     "body": [
       "import React, { Component } from 'react'",
       "",
       "class ${1:${TM_FILENAME_BASE}} extends Component {",
-      "  render() {",
-      "    return (",
-      "      <div>",
-      "        $2",
-      "      </div>",
-      "    )",
-      "  }",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<div>",
+      "\t\t\t\t$2",
+      "\t\t\t</div>",
+      "\t\t)",
+      "\t}",
       "}",
       "",
       "export default ${1:${TM_FILENAME_BASE}}",
@@ -43,17 +51,17 @@
     ],
     "description": "Creates a React component class with export after the declaration"
   },
-  "React stateless functional component": {
+  "React: stateless functional component": {
     "prefix": "rse",
     "body": [
       "import React from 'react'",
       "",
       "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
-      "  return (",
-      "    <div>",
-      "      $3",
-      "    </div>",
-      "  )",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$3",
+      "\t\t</div>",
+      "\t)",
       "}",
       "",
       "export default ${1:${TM_FILENAME_BASE}}",
@@ -61,7 +69,15 @@
     ],
     "description": "React Stateless Functional Component with export after declaration"
   },
-  "React componentDidMount with log": {
+  "React: ComponentDidUpdate": {
+    "prefix": "cdu",
+    "body": ["componentDidUpdate(prevProps, prevState) {", "\t$1", "}"]
+  },
+  "React: componentDidMount": {
+    "prefix": "cdm",
+    "body": ["componentDidMount() {", "\t$1", "}"]
+  },
+  "React: componentDidMount with log": {
     "prefix": "cdml",
     "body": [
       "componentDidMount() {",
@@ -69,12 +85,80 @@
       "}"
     ]
   },
-  "React componentDidMount with log (color)": {
+  "React: componentDidMount with log (color)": {
     "prefix": "cdmlc",
     "body": [
       "componentDidMount() {",
-      "\tconsole.log('%c${1:${TM_FILENAME_BASE}} Mounted', 'color: darkslateblue;')",
+      "\tconsole.log('%c${1:${TM_FILENAME_BASE}} Mounted', 'color: cornflowerblue;')",
       "}"
     ]
+  },
+  "PropType: Array": {
+    "prefix": "pta",
+    "body": "PropTypes.array,"
+  },
+  "PropType: Array (Required)": {
+    "prefix": "ptar",
+    "body": "PropTypes.array.isRequired,"
+  },
+  "PropType: Boolean": {
+    "prefix": "ptb",
+    "body": "PropTypes.bool,"
+  },
+  "PropType: Boolean (Required)": {
+    "prefix": "ptbr",
+    "body": "PropTypes.bool.isRequired,"
+  },
+  "PropType: Element": {
+    "prefix": "ptel",
+    "body": "PropTypes.element,",
+    "description": "React Docs: A React element"
+  },
+  "PropType: Element (Required)": {
+    "prefix": "ptelr",
+    "body": "PropTypes.element.isRequired,",
+    "description": "React Docs: A React element"
+  },
+  "PropType: Function": {
+    "prefix": "ptf",
+    "body": "PropTypes.func,"
+  },
+  "PropType: Function (Required)": {
+    "prefix": "ptfr",
+    "body": "PropTypes.func.isRequired,"
+  },
+  "PropType: Node": {
+    "prefix": "ptnd",
+    "body": "PropTypes.node,",
+    "description": "React Docs: 'Anything that can be rendered: numbers, strings, elements or an array (or fragment) containing these types.'"
+  },
+  "PropType: Node (Required)": {
+    "prefix": "ptndr",
+    "body": "PropTypes.node.isRequired,",
+    "description": "React Docs: 'Anything that can be rendered: numbers, strings, elements or an array (or fragment) containing these types.'"
+  },
+  "PropType: Number": {
+    "prefix": "ptn",
+    "body": "PropTypes.number,"
+  },
+  "PropType: Number (Required)": {
+    "prefix": "ptnr",
+    "body": "PropTypes.number.isRequired,"
+  },
+  "PropType: Object": {
+    "prefix": "pto",
+    "body": "PropTypes.object,"
+  },
+  "PropType: Object (Required)": {
+    "prefix": "ptor",
+    "body": "PropTypes.object.isRequired,"
+  },
+  "PropType: String": {
+    "prefix": "pts",
+    "body": "PropTypes.string,"
+  },
+  "PropType: String (Required)": {
+    "prefix": "ptsr",
+    "body": "PropTypes.string.isRequired,"
   }
 }
