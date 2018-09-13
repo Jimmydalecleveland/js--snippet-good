@@ -23,9 +23,33 @@
     "prefix": "imd",
     "body": "import { $2 } from '${1:module}'$0"
   },
+  "import React": {
+    "prefix": "imr",
+    "body": "import React from 'react'"
+  },
+  "import React, Component": {
+    "prefix": "imrc",
+    "body": "import React, { Component } from 'react'"
+  },
   "import React, PureComponent": {
     "prefix": "imrpc",
     "body": "import React, { PureComponent } from 'react'"
+  },
+  "import PropTypes": {
+    "prefix": "impt",
+    "body": "import PropTypes from 'prop-types'"
+  },
+  "import shallow from enzyme": {
+    "prefix": "imes",
+    "body": "import { shallow } from 'enzyme'"
+  },
+  "import mount from enzyme": {
+    "prefix": "imem",
+    "body": "import { mount } from 'enzyme'"
+  },
+  "import shallow, mount from enzyme": {
+    "prefix": "imesm",
+    "body": "import { shallow, mount } from 'enzyme'"
   },
   "export default module": {
     "prefix": "exp",
@@ -160,5 +184,41 @@
   "PropType: String (Required)": {
     "prefix": "ptsr",
     "body": "PropTypes.string.isRequired,"
+  },
+  "Testing: `describe` block": {
+    "prefix": "des",
+    "body": ["describe('$1', () => {", "\t$2", "})"]
+  },
+  "Testing: `it` block": {
+    "prefix": "tit",
+    "body": ["it('$1', () => {", "\t$2", "})"]
+  },
+  "Testing: expect to match snapshot": {
+    "prefix": "expss",
+    "body": ["expect($1).toMatchSnapshot()"]
+  },
+  "Testing: expect to equal": {
+    "prefix": "expte",
+    "body": ["expect($1).toEqual($2)"]
+  },
+  "Testing: expect to equal (groovy = alternative)": {
+    "prefix": "exp==",
+    "body": ["expect($1).toEqual($2)"]
+  },
+  "Enzyme: shallow": {
+    "prefix": "shal",
+    "body": ["const $1 = shallow(<$2 />)"]
+  },
+  "Enzyme: shallow with props": {
+    "prefix": "shalp",
+    "body": ["const $1 = shallow(<$2 {...props} />)"]
+  },
+  "Enzyme: mount": {
+    "prefix": "mnt",
+    "body": ["const $1 = mount(<$2 />)"]
+  },
+  "Enzyme: mount with props": {
+    "prefix": "mntp",
+    "body": ["const $1 = mount(<$2 {...props} />)"]
   }
 }

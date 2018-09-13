@@ -44,8 +44,39 @@ _note:_ the string passed to `.group` and `.groupEnd` should be the same
 
 ---
 
+#### `imr` &ndash; import React
+`import React from 'react'`
+
+---
+
+
+#### `imrc` &ndash; import React, Component
+`import React, { Component } from 'react'`
+
+---
+
 #### `imrpc` &ndash; import React, PureComponent
 `import React, { PureComponent } from 'react'`
+
+---
+
+#### `impt` &ndash; import PropTypes 
+`import PropTypes from 'prop-types'`
+
+---
+
+#### `imes` &ndash; import shallow from enzyme 
+`import { shallow } from 'enzyme'`
+
+---
+
+#### `imem` &ndash; import mount from enzyme 
+`import { mount } from 'enzyme'`
+
+---
+
+#### `imesm` &ndash; import mount and shallow from enzyme 
+`import { shallow, mount } from 'enzyme'`
 
 ---
 
@@ -144,6 +175,54 @@ componentDidMount() {
 | `ptsr`  | PropType.string.isRequired |
 ---
 
+#### `des` &ndash; Testing `describe` block 
+```js
+describe('', () => {
+
+})
+```
+---
+
+#### `tit` &ndash; Testing `it` block 
+```js
+it('', () => {
+
+})
+```
+
+---
+
+#### `expss` &ndash; Testing expect to match snapshot
+`expect().toMatchSnapshot()`
+
+---
+
+#### `expte` &ndash; Testing expect toEqual 
+`expect().toEqual()`
+
+---
+
+#### `shal` &ndash; Enzyme shallow mount component 
+`const component = shallow(<Component />`
+
+---
+
+#### `shalp` &ndash; Enzyme shallow mount component with premade props object
+`const component = shallow(<Component {...props} />`
+
+---
+
+#### `mnt` &ndash; Enzyme full mount component
+`const component = mount(<Component />`
+
+---
+
+#### `mntp` &ndash; Enzyme full mount component with premade props object
+`const component = mount(<Component {...props} />`
+
+---
+---
+
 ## Release Notes
 
 ### 0.0.1
@@ -157,3 +236,7 @@ Add console log snippets
 ### 0.2.0
 
 Add console.group, React lifecycle methods, and PropTypes
+
+### 0.3.0
+
+Add testing snippets, enzyme imports, additonal react imports
