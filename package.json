@@ -26,7 +26,7 @@
         "path": "./snippets/snippets.json"
       },
       {
-        "language": "styled-css",
+        "language": "css",
         "path": "./snippets/styled-components-snippets.json"
       }
     ]
