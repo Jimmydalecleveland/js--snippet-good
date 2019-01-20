@@ -193,6 +193,10 @@
     "prefix": "ptsr",
     "body": "PropTypes.string.isRequired,"
   },
+  "Styled Components: create component": {
+    "prefix": "sc",
+    "body": ["const ${1:Styled} = styled.${2:div}`", "\t$3", "`", ""]
+  },
   "Testing: `describe` block": {
     "prefix": "des",
     "body": ["describe('$1', () => {", "\t$2", "})"]
