@@ -265,3 +265,7 @@ Add testing snippets, enzyme imports, additonal react imports
 ### 0.4.0
 
 Add Styled Components snippets
+
+### 1.0.0
+
+Added `styled-components-snippets.json` and moved styled components snippets there

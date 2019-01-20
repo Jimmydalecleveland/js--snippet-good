@@ -1,0 +1,14 @@
+{
+  "Styled Components: component": {
+    "prefix": "sc",
+    "body": ["const ${1:Styled} = styled.${2:div}`", "\t$3", "`", ""]
+  },
+  "Styled Components: function with props": {
+    "prefix": "scp",
+    "body": "${props => props.$1}"
+  },
+  "Styled Components: function theme destructure": {
+    "prefix": "sct",
+    "body": "${({ theme }) => theme.$1}"
+  }
+}

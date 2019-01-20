@@ -2,7 +2,7 @@
   "name": "js--snippet-good",
   "displayName": "JS - Snippet Good!",
   "description": "A collection of Javascript snippets the way I want them to be. (Intended for personal use)",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "publisher": "jimmydc",
   "icon": "images/logo.png",
   "repository": {
@@ -24,6 +24,10 @@
       {
         "language": "javascriptreact",
         "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "source.css.styled",
+        "path": "./snippets/styled-components-snippets.json"
       }
     ]
   }

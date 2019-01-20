@@ -193,19 +193,6 @@
     "prefix": "ptsr",
     "body": "PropTypes.string.isRequired,"
   },
-  "Styled Components: component": {
-    "prefix": "sc",
-    "body": ["const ${1:Styled} = styled.${2:div}`", "\t$3", "`", ""],
-    "description": "React Stateless Functional Component with export after declaration"
-  },
-  "Styled Components: function interpolation": {
-    "prefix": "scf",
-    "body": "${props => $1}"
-  },
-  "Styled Components: function theme destructure": {
-    "prefix": "sct",
-    "body": "${({ theme }) => $1}"
-  },
   "Testing: `describe` block": {
     "prefix": "des",
     "body": ["describe('$1', () => {", "\t$2", "})"]

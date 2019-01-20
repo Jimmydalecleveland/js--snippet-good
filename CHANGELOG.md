@@ -40,3 +40,14 @@
 ### Changed
 
 - Changed enzyme shortcut from `ime` to `imez` because I use it less and wanted `imes` for `@emotion/styled`
+
+## [1.0.0] - 2019-01-19
+
+### Added
+
+- `styled-components-snippets.json` so that styled component css is not flooded with our JS snippets
+
+### Changed
+
+- Moved styled components snippets from `snippets.json` to the new snippet file for styled components
+- Changed styled component functions to include their parameter in the default typing area
