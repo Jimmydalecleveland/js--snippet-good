@@ -1,10 +1,10 @@
 {
   "Styled Components: function with props": {
     "prefix": "scp",
-    "body": "${props => props.$1}"
+    "body": "${props => props.$1};"
   },
   "Styled Components: function theme destructure": {
     "prefix": "sct",
-    "body": "${({ theme }) => theme.$1}"
+    "body": "${({ theme }) => theme.$1};"
   }
 }

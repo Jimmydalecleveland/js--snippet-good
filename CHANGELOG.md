@@ -51,3 +51,10 @@
 
 - Moved styled components snippets from `snippets.json` to the new snippet file for styled components
 - Changed styled component functions to include their parameter in the default typing area
+
+## [1.0.4] - 2019-06-04
+
+### Changed
+
+- Update styled component callback snippets to have a semicolon at the end (required to compile).
+- Add reference in readme

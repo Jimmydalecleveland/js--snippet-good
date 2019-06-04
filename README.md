@@ -30,9 +30,9 @@ _note:_ cursor starts at your message, first tab goes to color, third tab goes t
 _note:_ the string passed to `.group` and `.groupEnd` should be the same
 
 ```js
-console.group("Group Name");
-console.log("I am in the group!");
-console.groupEnd("Group Name");
+console.group('Group Name');
+console.log('I am in the group!');
+console.groupEnd('Group Name');
 ```
 
 ---
@@ -100,7 +100,7 @@ console.groupEnd("Group Name");
 #### `rce` &ndash; React, Component class with export after
 
 ```js
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Module extends Component {
   render() {
@@ -116,7 +116,7 @@ export default Module;
 #### `rse` &ndash; React stateless functional component
 
 ```js
-import React from "react";
+import React from 'react';
 
 const Module = () => {
   return <div />;
@@ -167,6 +167,22 @@ componentDidMount() {
 
 ---
 
+#### `scp` &ndash; Styled Components: props callback
+
+```js
+${props => props.};
+```
+
+---
+
+#### `sct` &ndash; Styled Components: theme callback
+
+```js
+${({ theme }) => theme.};
+```
+
+---
+
 #### PropType snippets:
 
 | Prefix  | Output                      |
@@ -193,7 +209,7 @@ componentDidMount() {
 #### `des` &ndash; Testing `describe` block
 
 ```js
-describe("", () => {});
+describe('', () => {});
 ```
 
 ---
@@ -201,7 +217,7 @@ describe("", () => {});
 #### `tit` &ndash; Testing `it` block
 
 ```js
-it("", () => {});
+it('', () => {});
 ```
 
 ---
