@@ -4,6 +4,9 @@
 
 A collection of customized snippets intended for personal use. I've gathered and modified some of them from existing packages and created the rest.
 
+## Example (`rfpe` and `ptsr` snippets)
+![rfpe snippet example](./examples/rfpe.gif)
+
 ## Supported VS Code Language Extensions
 
 - javascript (.js)
@@ -149,6 +152,28 @@ const Module = () => {
 
 ---
 
+#### `rfpe` &ndash; React functional component with PropTypes and export after
+
+```js
+import React from 'react';
+import PropTypes from 'prop-types'
+
+const Module = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+Module.propTypes = {
+
+}
+
+export default Module;
+```
+
+---
 #### `cdu` &ndash; React: componentDidUpdate
 
 ```js

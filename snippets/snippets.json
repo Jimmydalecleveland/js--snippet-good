@@ -133,6 +133,29 @@
     ],
     "description": "React Stateless Functional Component with export after declaration (legacy support for original snippet)"
   },
+  "React: functional component with PropTypes and export after": {
+    "prefix": "rfpe",
+    "body": [
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\treturn (",
+      "\t\t<${3:div}>",
+      "\t\t\t$4",
+      "\t\t</${3:div}>",
+      "\t)",
+      "}",
+      "",
+      "${1:${TM_FILENAME_BASE}}.propTypes = {",
+      "\t$5",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "React Stateless Functional Component with export after declaration (legacy support for original snippet)"
+  },
   "React: ComponentDidUpdate": {
     "prefix": "cdu",
     "body": ["componentDidUpdate(prevProps, prevState) {", "\t$1", "}"]

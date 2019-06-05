@@ -64,3 +64,8 @@
 ### Added
 - Add react component snippet without any imports or exports for multi-component files
 - Add alternative snippet shortcut `rfe` (react functional export) for `rse` (react stateless functional export) due to hooks allowing state in functional components now
+
+## [1.2.0] - 2019-06-04
+
+### Added
+- Add react component with proptypes and default export snippet
