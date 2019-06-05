@@ -58,3 +58,9 @@
 
 - Update styled component callback snippets to have a semicolon at the end (required to compile).
 - Add reference in readme
+
+## [1.1.0] - 2019-06-04
+
+### Added
+- Add react component snippet without any imports or exports for multi-component files
+- Add alternative snippet shortcut `rfe` (react functional export) for `rse` (react stateless functional export) due to hooks allowing state in functional components now

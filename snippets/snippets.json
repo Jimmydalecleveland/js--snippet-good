@@ -71,9 +71,9 @@
       "class ${1:${TM_FILENAME_BASE}} extends Component {",
       "\trender() {",
       "\t\treturn (",
-      "\t\t\t<div>",
-      "\t\t\t\t$2",
-      "\t\t\t</div>",
+      "\t\t\t<${2:div}>",
+      "\t\t\t\t$3",
+      "\t\t\t</{2:div}>",
       "\t\t)",
       "\t}",
       "}",
@@ -83,23 +83,55 @@
     ],
     "description": "Creates a React component class with export after the declaration"
   },
-  "React: stateless functional component": {
-    "prefix": "rse",
+  "React: functional component": {
+    "prefix": "rfc",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\treturn (",
+      "\t\t<${3:div}>",
+      "\t\t\t$4",
+      "\t\t</${3:div}>",
+      "\t)",
+      "}",
+      ""
+    ],
+    "description": "React Functional Component"
+  },
+  "React: function component with export after": {
+    "prefix": "rfe",
     "body": [
       "import React from 'react'",
       "",
       "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
       "\treturn (",
-      "\t\t<div>",
-      "\t\t\t$3",
-      "\t\t</div>",
+      "\t\t<${3:div}>",
+      "\t\t\t$4",
+      "\t\t</${3:div}>",
       "\t)",
       "}",
       "",
       "export default ${1:${TM_FILENAME_BASE}}",
       ""
     ],
-    "description": "React Stateless Functional Component with export after declaration"
+    "description": "React Function Component with export after declaration"
+  },
+  "React: stateless functional component with export after": {
+    "prefix": "rse",
+    "body": [
+      "import React from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\treturn (",
+      "\t\t<${3:div}>",
+      "\t\t\t$4",
+      "\t\t</${3:div}>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "React Stateless Functional Component with export after declaration (legacy support for original snippet)"
   },
   "React: ComponentDidUpdate": {
     "prefix": "cdu",

@@ -30,9 +30,9 @@ _note:_ cursor starts at your message, first tab goes to color, third tab goes t
 _note:_ the string passed to `.group` and `.groupEnd` should be the same
 
 ```js
-console.group('Group Name');
-console.log('I am in the group!');
-console.groupEnd('Group Name');
+console.group('Group Name')
+console.log('I am in the group!')
+console.groupEnd('Group Name')
 ```
 
 ---
@@ -104,7 +104,11 @@ import React, { Component } from 'react';
 
 class Module extends Component {
   render() {
-    return <div />;
+    return (
+      <div>
+        
+      </div>
+    )
   }
 }
 
@@ -113,16 +117,34 @@ export default Module;
 
 ---
 
-#### `rse` &ndash; React stateless functional component
+#### `rse` or `rfe` &ndash; React functional component with export after
 
 ```js
 import React from 'react';
 
 const Module = () => {
-  return <div />;
-};
+  return (
+    <div>
+      
+    </div>
+  )
+}
 
 export default Module;
+```
+
+---
+
+#### `rfc` &ndash; React functional component
+
+```js
+const Module = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
 ```
 
 ---
@@ -209,7 +231,7 @@ ${({ theme }) => theme.};
 #### `des` &ndash; Testing `describe` block
 
 ```js
-describe('', () => {});
+describe('', () => {})
 ```
 
 ---
@@ -217,7 +239,7 @@ describe('', () => {});
 #### `tit` &ndash; Testing `it` block
 
 ```js
-it('', () => {});
+it('', () => {})
 ```
 
 ---
@@ -261,27 +283,4 @@ it('', () => {});
 ---
 
 ## Release Notes
-
-### 0.0.1
-
-Initial release. Just a few snippets to start with.
-
-### 0.1.0
-
-Add console log snippets
-
-### 0.2.0
-
-Add console.group, React lifecycle methods, and PropTypes
-
-### 0.3.0
-
-Add testing snippets, enzyme imports, additonal react imports
-
-### 0.4.0
-
-Add Styled Components snippets
-
-### 1.0.0
-
-Added `styled-components-snippets.json` and moved styled components snippets there
+See [Changelog](./CHANGELOG.md)
