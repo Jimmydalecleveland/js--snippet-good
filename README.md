@@ -305,6 +305,19 @@ it('', () => {})
 
 ---
 
+#### `sbc` &ndash; Storybook Component
+Quick story setup for a component in the same directory as the story.
+```js
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+
+import Component from '.'
+
+storiesOf('Components|Component', module).add('default', () => (
+  <Component></Component>
+))
+```
+---
 ---
 
 ## Release Notes

@@ -69,3 +69,8 @@
 
 ### Added
 - Add react component with proptypes and default export snippet
+
+## [1.3.0] - 2019-06-11
+
+### Added
+- Add Storybook snippet for setting up a basic component story based on the root name of the file (no extensions)

@@ -287,5 +287,18 @@
   "Enzyme: mount with props": {
     "prefix": "mntp",
     "body": ["const $1 = mount(<$2 {...props} />)"]
+  },
+  "Storybook: component story setup": {
+    "prefix": "sbc",
+    "body": [
+      "import React from 'react'",
+      "import { storiesOf } from '@storybook/react'",
+      "",
+      "import ${1:${TM_FILENAME_BASE/(.*)\\..+$/$1/}} from '${2:.}'",
+      "",
+      "storiesOf('${3:Components}|${1}}', module).add('default', () => (",
+      "\t<${1}>$4</${1}>",
+      "))"
+    ]
   }
 }
