@@ -73,7 +73,7 @@
       "\t\treturn (",
       "\t\t\t<${2:div}>",
       "\t\t\t\t$3",
-      "\t\t\t</{2:div}>",
+      "\t\t\t</${2:div}>",
       "\t\t)",
       "\t}",
       "}",
@@ -296,7 +296,7 @@
       "",
       "import ${1:${TM_FILENAME/\\..*//}} from '${2:.}'",
       "",
-      "storiesOf('${3:Components}|${1}}', module).add('default', () => (",
+      "storiesOf('${3:Components}|${1}', module).add('default', () => (",
       "\t<${1}>$4</${1}>",
       "))"
     ]
