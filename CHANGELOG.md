@@ -73,4 +73,11 @@
 ## [1.3.0] - 2019-06-11
 
 ### Added
-- Add Storybook snippet for setting up a basic component story based on the root name of the file (no extensions)
+- Add Storybook snippet for setting up a basic component story based on the root name of the file (no file extensions)
+
+## [1.4.0] - 2019-07-25
+
+### Added
+- React Testing Library bootstrap for setting up basic component test with the root name of the file (no file extensions)
+- React Testing Library snapshot snippet
+- Jest `test` block snippet

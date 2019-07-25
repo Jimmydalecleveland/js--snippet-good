@@ -305,6 +305,41 @@ it('', () => {})
 
 ---
 
+#### `rtlbs` &ndash; React Testing Library: Bootstrap
+
+```js
+import React from 'react'
+import render from '../setup-tests'
+
+import TestComponent from '.'
+
+describe('TestComponent', () => {
+  test('TestComponent should render', () => {
+    const { container } = render(
+      <TestComponent></TestComponent>
+    )
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
+})
+```
+
+---
+
+#### `rtlss` &ndash; React Testing Library: Snapshot
+`expect(container.firstChild).toMatchSnapshot()`
+
+---
+
+#### `tst` &ndash; Testing: test block
+```js
+  test('', () => {
+    
+  })
+```
+
+---
+
 #### `sbc` &ndash; Storybook Component
 Quick story setup for a component in the same directory as the story.
 ```js

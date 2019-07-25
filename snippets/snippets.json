@@ -260,6 +260,10 @@
     "prefix": "tit",
     "body": ["it('$1', () => {", "\t$2", "})"]
   },
+  "Testing: `test` block": {
+    "prefix": "tst",
+    "body": ["test('$1', () => {", "\t$2", "})"]
+  },
   "Testing: expect to match snapshot": {
     "prefix": "expss",
     "body": ["expect($1).toMatchSnapshot()"]
@@ -287,6 +291,32 @@
   "Enzyme: mount with props": {
     "prefix": "mntp",
     "body": ["const $1 = mount(<$2 {...props} />)"]
+  },
+  "React Testing Library: Bootstrap": {
+    "prefix": "rtlbs",
+    "body": [
+      "import React from 'react'",
+      "import render from '${2:../setup-tests}'",
+      "",
+      "import ${1:${TM_FILENAME/\\..*//}} from '${3:.}'",
+      "",
+      "describe('$1', () => {",
+      "\ttest('$1 should render', () => {",
+      "\t\tconst { container } = render(",
+      "\t\t\t<$1$4>$5</$1>",
+      "\t\t)",
+      "",
+      "\t\texpect(container.firstChild).toMatchSnapshot()",
+      "\t})",
+      "})",
+      ""
+    ],
+    "description": "React Testing Library Bootstrap with 'setup-tests' file import"
+  },
+  "React Testing Library: Expect Snapshot": {
+    "prefix": "rtlss",
+    "body": "expect(container.firstChild).toMatchSnapshot()",
+    "description": "React Testing Library expect test for snapshot"
   },
   "Storybook: component story setup": {
     "prefix": "sbc",
