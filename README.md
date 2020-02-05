@@ -232,24 +232,26 @@ ${({ theme }) => theme.};
 
 #### PropType snippets:
 
-| Prefix  | Output                      |
-| ------- | --------------------------- |
-| `pta`   | PropTypes.array             |
-| `ptar`  | PropType.array.isRequired   |
-| `ptb`   | PropType.bool               |
-| `ptbr`  | PropType.bool.isRequired    |
-| `ptel`  | PropType.element            |
-| `ptelr` | PropType.element.isRequired |
-| `ptf`   | PropType.func               |
-| `ptfr`  | PropType.func.isRequired    |
-| `ptnd`  | PropType.node               |
-| `ptndr` | PropType.node.isRequired    |
-| `ptn`   | PropType.number             |
-| `ptnr`  | PropType.number.isRequired  |
-| `pto`   | PropType.object             |
-| `ptor`  | PropType.object.isRequired  |
-| `pts`   | PropType.string             |
-| `ptsr`  | PropType.string.isRequired  |
+| Prefix  | Output                         |
+| ------- | ------------------------------ |
+| `pta`   | PropTypes.array                |
+| `ptar`  | PropType.array.isRequired      |
+| `ptb`   | PropType.bool                  |
+| `ptbr`  | PropType.bool.isRequired       |
+| `ptel`  | PropType.element               |
+| `ptelr` | PropType.element.isRequired    |
+| `ptf`   | PropType.func                  |
+| `ptfr`  | PropType.func.isRequired       |
+| `ptnd`  | PropType.node                  |
+| `ptndr` | PropType.node.isRequired       |
+| `ptn`   | PropType.number                |
+| `ptnr`  | PropType.number.isRequired     |
+| `pto`   | PropType.object                |
+| `ptor`  | PropType.object.isRequired     |
+| `pts`   | PropType.string                |
+| `ptsr`  | PropType.string.isRequired     |
+| `ptsh`   | PropType.shape({})            |
+| `ptshr`  | PropType.shape({}).isRequired |
 
 ---
 
@@ -275,9 +277,21 @@ it('', () => {})
 
 ---
 
-#### `expte` &ndash; Testing expect toEqual
+#### `expte` &ndash; Testing expect to equal
 
 `expect().toEqual()`
+
+---
+
+#### `expte` &ndash; Testing expect to be
+
+`expect().toBe()`
+
+---
+
+#### `expte` &ndash; Testing expect to be null
+
+`expect().toBeNull()`
 
 ---
 
@@ -309,17 +323,17 @@ it('', () => {})
 
 ```js
 import React from 'react'
-import render from '../setup-tests'
+import { render } from '@testing-library/react'
 
 import TestComponent from '.'
 
 describe('TestComponent', () => {
-  test('TestComponent should render', () => {
+  test('should render', () => {
     const { container } = render(
       <TestComponent></TestComponent>
     )
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 })
 ```
@@ -327,7 +341,7 @@ describe('TestComponent', () => {
 ---
 
 #### `rtlss` &ndash; React Testing Library: Snapshot
-`expect(container.firstChild).toMatchSnapshot()`
+`expect(container).toMatchSnapshot()`
 
 ---
 

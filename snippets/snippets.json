@@ -240,6 +240,22 @@
     "prefix": "ptor",
     "body": "PropTypes.object.isRequired,"
   },
+  "PropType: Shape": {
+    "prefix": "ptsh",
+    "body": [
+      "PropTypes.shape({",
+      "\t$1",
+      "}),"
+    ]
+  },
+  "PropType: Shape (Required)": {
+    "prefix": "ptshr",
+    "body": [
+      "PropTypes.shape({",
+      "\t$1",
+      "}).isRequired,"
+    ]
+  },
   "PropType: String": {
     "prefix": "pts",
     "body": "PropTypes.string,"
@@ -276,6 +292,14 @@
     "prefix": "exp==",
     "body": ["expect($1).toEqual($2)"]
   },
+  "Testing: expect to be": {
+    "prefix": "exptb",
+    "body": ["expect($1).toBe($2)"]
+  },
+  "Testing: expect to be null": {
+    "prefix": "exptbn",
+    "body": ["expect($1).toBeNull()"]
+  },
   "Enzyme: shallow": {
     "prefix": "shal",
     "body": ["const $1 = shallow(<$2 />)"]
@@ -296,7 +320,7 @@
     "prefix": "rtlbs",
     "body": [
       "import React from 'react'",
-      "import render from '${2:../setup-tests}'",
+      "import { render } from '${2:@testing-library/react}'",
       "",
       "import ${1:${TM_FILENAME/\\..*//}} from '${3:.}'",
       "",
@@ -306,16 +330,16 @@
       "\t\t\t<$1$4>$5</$1>",
       "\t\t)",
       "",
-      "\t\texpect(container.firstChild).toMatchSnapshot()",
+      "\t\texpect(container).toMatchSnapshot()",
       "\t})",
       "})",
       ""
     ],
-    "description": "React Testing Library Bootstrap with 'setup-tests' file import"
+    "description": "React Testing Library Bootstrap file with snapshot"
   },
   "React Testing Library: Expect Snapshot": {
     "prefix": "rtlss",
-    "body": "expect(container.firstChild).toMatchSnapshot()",
+    "body": "expect(container).toMatchSnapshot()",
     "description": "React Testing Library expect test for snapshot"
   },
   "Storybook: component story setup": {
