@@ -237,7 +237,7 @@ Module.propTypes = {
 export default Module;
 ```
 
-### `pt` &ndash; PropTypes object
+#### `pt` &ndash; PropTypes object
 Useful if you have already created a component and decide you need Proptypes after. Uses the filename as the default for `Module`.
 *__Note:__: VSCode snippets do not autocomplete during placeholders, so you'll want to hit escape after tabbing inside of the object*
 
