@@ -11,6 +11,7 @@ A collection of customized snippets intended for personal use. I've gathered and
 
 - javascript (.js)
 - javascriptreact (.jsx)
+- css (styled component shortcuts)
 
 ## Snippets
 
