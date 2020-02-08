@@ -1,4 +1,7 @@
 # JS - Snippet Good!
+![](https://vsmarketplacebadge.apphb.com/version/jimmydc.js--snippet-good.svg)
+
+## 1.6.0 Release - React Hook snippets for `useState` and `useEffect`, PropTypes bugfixes
 
 ## Features
 
@@ -70,6 +73,24 @@ console.groupEnd('Group Name')
 
 ---
 
+#### `imrus` &ndash; import React, useState
+
+`import React, { useState } from 'react'`
+
+---
+
+#### `imrue` &ndash; import React, useEffect
+
+`import React, { useEffect } from 'react'`
+
+---
+
+#### `imruse` or `imrues` &ndash; import React, useState and useEffect
+
+`import React, { useState, useEffect } from 'react'`
+
+---
+
 #### `impt` &ndash; import PropTypes
 
 `import PropTypes from 'prop-types'`
@@ -120,12 +141,54 @@ export default Module;
 
 ---
 
-#### `rse` or `rfe` &ndash; React functional component with export after
+#### `rfe` or `rse`(deprecated) &ndash; React functional component with export after
 
 ```js
 import React from 'react';
 
 const Module = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Module;
+```
+
+---
+
+#### `rus` &ndash; React `useState` statement
+*__Note__: this snippet takes the `state` placeholder and captializes the `setState` counterpart using snippet transforms. Just type whatever your `state` variable is and press "Tab" to activate the transform and move on to the next placeholder.*
+
+*__Note of Note__: I can't get this to work with the "Vim" extension, not matter how hard I try. Sorry :(* 
+
+```js
+const [state, setState] = useState()
+```
+
+#### `rue` &ndash; React `useEffect` statement
+*__Note__: I didn't place the 2nd argument of `useEffect` in this snippet, because I often do not know if I'm going to need it, or what props/state will go in there until I'm done writing it. It also becomes troublesome to delete the placeholder if you don't want it*
+
+```js
+useEffect(() => {
+  
+})
+```
+
+
+#### `rfeus` or `rfes` &ndash; React component with export after and `useState` setup
+*__Note__: this snippet takes the `state` placeholder and captializes the `setState` counterpart using snippet transforms. Just type whatever your `state` variable is and press "Tab" to activate the transform and move on to the next placeholder.*
+
+*__Note of Note__: I can't get this to work with the "Vim" extension, not matter how hard I try. Sorry :(* 
+
+```js
+import React, { useState } from 'react';
+
+const Module = () => {
+  const [state, setState] = useState()
+
   return (
     <div>
       
@@ -172,6 +235,17 @@ Module.propTypes = {
 
 export default Module;
 ```
+
+### `pt` &ndash; PropTypes object
+Useful if you have already created a component and decide you need Proptypes after. Uses the filename as the default for `Module`.
+*__Note:__: VSCode snippets do not autocomplete during placeholders, so you'll want to hit escape after tabbing inside of the object*
+
+```js
+Module.propTypes = {
+
+}
+```
+
 
 ---
 #### `cdu` &ndash; React: componentDidUpdate

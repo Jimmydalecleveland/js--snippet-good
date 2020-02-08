@@ -35,6 +35,22 @@
     "prefix": "imrpc",
     "body": "import React, { PureComponent } from 'react'"
   },
+  "import React, useState": {
+    "prefix": "imrus",
+    "body": "import React, { useState } from 'react'"
+  },
+  "import React, useEffect": {
+    "prefix": "imrue",
+    "body": "import React, { useEffect } from 'react'"
+  },
+  "import React, useEffect and useState": {
+    "prefix": "imrues",
+    "body": "import React, { useEffect, useState } from 'react'"
+  },
+  "import React, useState and useEffect": {
+    "prefix": "imruse",
+    "body": "import React, { useState, useEffect } from 'react'"
+  },
   "import PropTypes": {
     "prefix": "impt",
     "body": "import PropTypes from 'prop-types'"
@@ -62,6 +78,18 @@
   "export default module": {
     "prefix": "exp",
     "body": "export default $1$0"
+  },
+  "React: useState": {
+    "prefix": "rus",
+    "body": "const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = useState($4)"
+  },
+  "React: useEffect": {
+    "prefix": "rue",
+    "body": [
+      "useEffect(() => {",
+      "\t$0",
+      "})"
+    ]
   },
   "React: Component class with export after": {
     "prefix": "rce",
@@ -115,6 +143,25 @@
     ],
     "description": "React Function Component with export after declaration"
   },
+  "React: function component with useState and export after": {
+    "prefix": "rfeus",
+    "body": [
+      "import React, { useState } from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\tconst [${3:state}, set${3/(.*)/${1:/capitalize}/}] = useState($4)",
+      "\treturn (",
+      "\t\t<${5:div}>",
+      "\t\t\t$6",
+      "\t\t</${5:div}>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "React Function Component with export after declaration"
+  },
   "React: stateless functional component with export after": {
     "prefix": "rse",
     "body": [
@@ -148,13 +195,21 @@
       "}",
       "",
       "${1:${TM_FILENAME_BASE}}.propTypes = {",
-      "\t$5",
+      "\t$0",
       "}",
       "",
       "export default ${1:${TM_FILENAME_BASE}}",
       ""
     ],
     "description": "React Stateless Functional Component with export after declaration (legacy support for original snippet)"
+  },
+  "React: PropTypes object": {
+    "prefix": "pt",
+    "body": [
+      "${1:${TM_FILENAME_BASE}}.propTypes = {",
+      "\t$0",
+      "}"
+    ]
   },
   "React: ComponentDidUpdate": {
     "prefix": "cdu",

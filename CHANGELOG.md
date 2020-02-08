@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [1.6.0] - 2020-02-08
+### Added
+- React hook snippets for `useState`, `useEffect` imports and statements, and a bootstrap with `useState`. It took me a while to figure out the `useState` statement, because I really wanted the `[state, useState]` destructed variables to use one placeholder and capitalize the first character after `use`. Turns out you can do this with a regexp capture but with the Vim vscode extension it does not play nicely. So it works without Vim, but I haven't figured it out for Vim yet.
+- Added a PropTypes (`pt`) snippet for setting up the `MyComponent.propTypes` object in case you decided to add it after creating a component. It uses the filename as the default.
+
+### Fixed
+- Some snippets, such as `rfpe` (create React component with PropTypes object) would not autocomplete snippets until the entire snippet was exited. This is how VSCode snippets work, however, I have learned that you can set the ending point of a snippet (`$0` for the curious) where you like, rather than the end of the code that was added. This allows the `propTypes` object snippet to behave as intended, without having to hit Escape or Ctrl+Space to type further snippets inside the object.
+
 ## [1.5.0] - 2020-02-05
 
 ### Added
