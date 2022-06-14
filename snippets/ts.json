@@ -1,0 +1,74 @@
+{
+  "console log": {
+    "prefix": "cl",
+    "body": "console.log($1)"
+  },
+  "console log with color": {
+    "prefix": "clc",
+    "body": "console.log('%c$1', 'color: ${2:cornflowerblue};'$3)"
+  },
+  "console log group": {
+    "prefix": "clg",
+    "body": [
+      "console.group('$1')",
+      "\tconsole.log($2)",
+      "console.groupEnd('$1')"
+    ]
+  },
+  "import module": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}'$0"
+  },
+  "import module destructured": {
+    "prefix": "imd",
+    "body": "import { $2 } from '${1:module}'$0"
+  },
+  "import Styled Components": {
+    "prefix": "imsc",
+    "body": "import styled from 'styled-components'"
+  },
+  "import Emotion Styled Components": {
+    "prefix": "imes",
+    "body": "import styled from '@emotion/styled'"
+  },
+  "export default module": {
+    "prefix": "exp",
+    "body": "export default $1$0"
+  },
+  "Styled Components: create component": {
+    "prefix": "sc",
+    "body": ["const ${1:Styled} = styled.${2:div}`", "\t$3", "`", ""]
+  },
+  "Testing: `describe` block": {
+    "prefix": "des",
+    "body": ["describe('$1', () => {", "\t$2", "})"]
+  },
+  "Testing: `it` block": {
+    "prefix": "tit",
+    "body": ["it('$1', () => {", "\t$2", "})"]
+  },
+  "Testing: `test` block": {
+    "prefix": "tst",
+    "body": ["test('$1', () => {", "\t$2", "})"]
+  },
+  "Testing: expect to match snapshot": {
+    "prefix": "expss",
+    "body": ["expect($1).toMatchSnapshot()"]
+  },
+  "Testing: expect to equal": {
+    "prefix": "expte",
+    "body": ["expect($1).toEqual($2)"]
+  },
+  "Testing: expect to equal (groovy = alternative)": {
+    "prefix": "exp==",
+    "body": ["expect($1).toEqual($2)"]
+  },
+  "Testing: expect to be": {
+    "prefix": "exptb",
+    "body": ["expect($1).toBe($2)"]
+  },
+  "Testing: expect to be null": {
+    "prefix": "exptbn",
+    "body": ["expect($1).toBeNull()"]
+  }
+}

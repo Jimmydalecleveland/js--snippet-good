@@ -1,0 +1,218 @@
+{
+  "console log": {
+    "prefix": "cl",
+    "body": "console.log($1)"
+  },
+  "console log with color": {
+    "prefix": "clc",
+    "body": "console.log('%c$1', 'color: ${2:cornflowerblue};'$3)"
+  },
+  "console log group": {
+    "prefix": "clg",
+    "body": [
+      "console.group('$1')",
+      "\tconsole.log($2)",
+      "console.groupEnd('$1')"
+    ]
+  },
+  "import module": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}'$0"
+  },
+  "import module destructured": {
+    "prefix": "imd",
+    "body": "import { $2 } from '${1:module}'$0"
+  },
+  "import React": {
+    "prefix": "imr",
+    "body": "import * as React from 'react'"
+  },
+  "import Styled Components": {
+    "prefix": "imsc",
+    "body": "import styled from 'styled-components'"
+  },
+  "import Emotion Styled Components": {
+    "prefix": "imes",
+    "body": "import styled from '@emotion/styled'"
+  },
+  "export default module": {
+    "prefix": "exp",
+    "body": "export default $1$0"
+  },
+  "React: useState": {
+    "prefix": "rus",
+    "body": "const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = React.useState($4)"
+  },
+  "React: useState with Generic": {
+    "prefix": "rusg",
+    "body": "const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = React.useState<$5>($4)"
+  },
+  "React: useEffect": {
+    "prefix": "rue",
+    "body": ["React.useEffect(() => {", "\t$0", "})"]
+  },
+  "React: functional component": {
+    "prefix": "rfc",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\treturn (",
+      "\t\t<${3:div}>",
+      "\t\t\t$4",
+      "\t\t</${3:div}>",
+      "\t)",
+      "}",
+      ""
+    ],
+    "description": "React Functional Component"
+  },
+  "React: function component with export after": {
+    "prefix": "rfe",
+    "body": [
+      "import * as React from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\treturn (",
+      "\t\t<${3:div}>",
+      "\t\t\t$4",
+      "\t\t</${3:div}>",
+      "\t)",
+      "}",
+      "",
+      "export default $1",
+      ""
+    ],
+    "description": "React Function Component with export after declaration"
+  },
+  "React: functional component with Props interface and export default after": {
+    "prefix": "rfpe",
+    "body": [
+      "export interface ${1:${TM_FILENAME_BASE}}Props {",
+      "\t${2:children: React.ReactNode}",
+      "}",
+      "",
+      "const $1 = ({ ${3:children} }: $1Props) => {",
+      "\treturn (",
+      "\t\t<${4:div}>",
+      "\t\t\t${5:{children\\}}",
+      "\t\t</${4:div}>",
+      "\t)",
+      "}",
+      "",
+      "export default $1",
+      ""
+    ],
+    "description": "React Stateless Functional Component with export after declaration (legacy support for original snippet)"
+  },
+  "React: functional component with Props interface, React import and export default after": {
+    "prefix": "rfpie",
+    "body": [
+      "import * as React from 'react'",
+      "",
+      "export interface ${1:${TM_FILENAME_BASE}}Props {",
+      "\t${2:children: React.ReactNode}",
+      "}",
+      "",
+      "const $1 = ({ ${3:children} }: $1Props) => {",
+      "\treturn (",
+      "\t\t<${4:div}>",
+      "\t\t\t${5:{children\\}}",
+      "\t\t</${4:div}>",
+      "\t)",
+      "}",
+      "",
+      "export default $1",
+      ""
+    ],
+    "description": "React Stateless Functional Component with export after declaration (legacy support for original snippet)"
+  },
+  "React: Props interface object": {
+    "prefix": "pt",
+    "body": [
+      "export interface ${1:${TM_FILENAME_BASE}}Props {",
+      "\t${1:children: React.ReactNode}",
+      "}"
+    ]
+  },
+  "Styled Components: create component": {
+    "prefix": "sc",
+    "body": ["const ${1:Styled} = styled.${2:div}`", "\t$3", "`", ""]
+  },
+  "Testing: `describe` block": {
+    "prefix": "des",
+    "body": ["describe('$1', () => {", "\t$2", "})"]
+  },
+  "Testing: `it` block": {
+    "prefix": "tit",
+    "body": ["it('$1', () => {", "\t$2", "})"]
+  },
+  "Testing: `test` block": {
+    "prefix": "tst",
+    "body": ["test('$1', () => {", "\t$2", "})"]
+  },
+  "Testing: expect to match snapshot": {
+    "prefix": "expss",
+    "body": ["expect($1).toMatchSnapshot()"]
+  },
+  "Testing: expect to equal": {
+    "prefix": "expte",
+    "body": ["expect($1).toEqual($2)"]
+  },
+  "Testing: expect to equal (groovy = alternative)": {
+    "prefix": "exp==",
+    "body": ["expect($1).toEqual($2)"]
+  },
+  "Testing: expect to be": {
+    "prefix": "exptb",
+    "body": ["expect($1).toBe($2)"]
+  },
+  "Testing: expect to be null": {
+    "prefix": "exptbn",
+    "body": ["expect($1).toBeNull()"]
+  },
+  "React Testing Library: Bootstrap": {
+    "prefix": "rtlbs",
+    "body": [
+      "import { render } from '${2:@testing-library/react}'",
+      "",
+      "import ${1:${TM_FILENAME/\\..*//}} from '${3:.}'",
+      "",
+      "describe('$1', () => {",
+      "\ttest('$1 should render', () => {",
+      "\t\tconst { container } = render(",
+      "\t\t\t<$1$4>$5</$1>",
+      "\t\t)",
+      "",
+      "\t\t$6",
+      "\t})",
+      "})",
+      ""
+    ],
+    "description": "React Testing Library Bootstrap file"
+  },
+  "React Testing Library: Expect Snapshot": {
+    "prefix": "rtlss",
+    "body": "expect(container).toMatchSnapshot()",
+    "description": "React Testing Library expect test for snapshot"
+  },
+  "Storybook: component story setup": {
+    "prefix": "sbc",
+    "body": [
+      "import { ComponentStory, ComponentMeta } from '@storybook/react'",
+      "",
+      "import { ${1:${TM_FILENAME/\\..*//}} } from '${2:./}'",
+      "",
+      "export default {",
+      "\ttitle: 'Components/$1',",
+      "\tcomponent: $1,",
+      "} as ComponentMeta<typeof $1>",
+      "",
+      "const Template: ComponentStory<typeof $1> = (args) => <$1 {...args} />",
+      "",
+      "export const ${3:Default} = Template.bind({})",
+      "$3.args = {",
+      "\tchildren: 'I am the $1 Component',",
+      "}",
+      ""
+    ]
+  }
+}

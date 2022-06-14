@@ -1,4 +1,5 @@
 # JS - Snippet Good!
+
 ![](https://vsmarketplacebadge.apphb.com/version/jimmydc.js--snippet-good.svg)
 
 ## 1.6.0 Release - React Hook snippets for `useState` and `useEffect`, PropTypes bugfixes
@@ -8,23 +9,30 @@
 A collection of customized snippets intended for personal use. I've gathered and modified some of them from existing packages and created the rest.
 
 ## Example (`rfpe` and `ptsr` snippets)
+
 ![rfpe snippet example](./examples/rfpe.gif)
 
 ## Supported VS Code Language Extensions
 
 - javascript (.js)
 - javascriptreact (.jsx)
+- typescript (.ts)
+- typescriptreact (.tsx)
 - css (styled component shortcuts)
+
+## Debugging developer note:
+
+If you are working on this extension, you can use the `F5` key to enter debugging mode and use the snippets you are adding/modifying in any project you like.
 
 ## Snippets
 
-#### `cl` &ndash; console log
+#### `cl` &ndash; `c`onsole `l`og
 
 `console.log()`
 
 ---
 
-#### `clc` &ndash; console log with color
+#### `clc` &ndash; `c`onsole `l`og with `c`olor
 
 _note:_ cursor starts at your message, first tab goes to color, third tab goes to the position after the css string, so you can add additional variables to log.
 
@@ -32,108 +40,104 @@ _note:_ cursor starts at your message, first tab goes to color, third tab goes t
 
 ---
 
-#### `clg` &ndash; console log group
+#### `clg` &ndash; `c`onsole `l`og `g`roup
 
 _note:_ the string passed to `.group` and `.groupEnd` should be the same
 
 ```js
-console.group('Group Name')
-console.log('I am in the group!')
-console.groupEnd('Group Name')
+console.group("Group Name");
+console.log("I am in the group!");
+console.groupEnd("Group Name");
 ```
 
 ---
 
-#### `imp` &ndash; import module
+#### `imp` &ndash; `imp`ort module
 
 `import module from 'module'`
 
 ---
 
-#### `imd` &ndash; import module destructured
+#### `imd` &ndash; `im`port module `d`estructured
 
 `import { moduleName } from 'module'`
 
 ---
 
-#### `imr` &ndash; import React
+#### `imr` &ndash; `im`port `r`eact
 
 `import React from 'react'`
 
 ---
 
-#### `imrc` &ndash; import React, Component
+#### `imrc` &ndash; `im`port `r`eact and `C`omponent
 
 `import React, { Component } from 'react'`
 
 ---
 
-#### `imrpc` &ndash; import React, PureComponent
+#### `imrpc` &ndash; `im`port `r`eact and `P`ure`C`omponent
 
 `import React, { PureComponent } from 'react'`
 
 ---
 
-#### `imrus` &ndash; import React, useState
+#### `imrus` &ndash; `im`port `r`eact and `u`se`S`tate
 
 `import React, { useState } from 'react'`
 
 ---
 
-#### `imrue` &ndash; import React, useEffect
+#### `imrue` &ndash; `im`port `r`eact and `u`se`E`ffect
 
 `import React, { useEffect } from 'react'`
 
 ---
 
-#### `imruse` or `imrues` &ndash; import React, useState and useEffect
+#### `imruse` or `imrues` &ndash; `im`port `r`eact, `u`se`S`tate and use`E`ffect
 
 `import React, { useState, useEffect } from 'react'`
 
 ---
 
-#### `impt` &ndash; import PropTypes
+#### `impt` &ndash; `im`port `P`rop`T`ypes
 
 `import PropTypes from 'prop-types'`
 
 ---
 
-#### `imes` &ndash; import shallow from enzyme
+#### `imes` &ndash; `im`port `e`nzyme's `s`hallow module
 
 `import { shallow } from 'enzyme'`
 
 ---
 
-#### `imem` &ndash; import mount from enzyme
+#### `imem` &ndash; `im`port `e`nzyme's `m`ount module
 
 `import { mount } from 'enzyme'`
 
 ---
 
-#### `imesm` &ndash; import mount and shallow from enzyme
+#### `imesm` &ndash; `im`port `e`nzyme's `s`hallow and `m`ount modules
 
 `import { shallow, mount } from 'enzyme'`
 
 ---
 
-#### `exp` &ndash; export default module
+#### `exp` &ndash; `exp`ort default module
 
 `export default module`
 
 ---
 
-#### `rce` &ndash; React, Component class with export after
+#### `rce` &ndash; `R`eact `C`omponent class with `e`xport after
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Module extends Component {
   render() {
-    return (
-      <div>
-        
-      </div>
-    )
+    return <div></div>;
   }
 }
 
@@ -142,114 +146,95 @@ export default Module;
 
 ---
 
-#### `rfe` or `rse`(deprecated) &ndash; React functional component with export after
+#### `rfe` or `rse`(deprecated) &ndash; `R`eact `f`unctional component with `e`xport after
 
 ```js
-import React from 'react';
+import React from "react";
 
 const Module = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
 export default Module;
 ```
 
 ---
 
-#### `rus` &ndash; React `useState` statement
-*__Note__: this snippet takes the `state` placeholder and captializes the `setState` counterpart using snippet transforms. Just type whatever your `state` variable is and press "Tab" to activate the transform and move on to the next placeholder.*
+#### `rus` &ndash; `R`eact `u`se`S`tate statement
 
-*__Note of Note__: I can't get this to work with the "Vim" extension, not matter how hard I try. Sorry :(* 
+_**Note**: this snippet takes the `state` placeholder and captializes the `setState` counterpart using snippet transforms. Just type whatever your `state` variable is and press "Tab" to activate the transform and move on to the next placeholder._
+
+_**Note of Note**: I can't get this to work with the "Vim" extension, not matter how hard I try. Sorry :(_
 
 ```js
-const [state, setState] = useState()
+const [state, setState] = useState();
 ```
 
-#### `rue` &ndash; React `useEffect` statement
-*__Note__: I didn't place the 2nd argument of `useEffect` in this snippet, because I often do not know if I'm going to need it, or what props/state will go in there until I'm done writing it. It also becomes troublesome to delete the placeholder if you don't want it*
+#### `rue` &ndash; `R`eact `u`se`E`ffect statement
+
+_**Note**: I didn't place the 2nd argument of `useEffect` in this snippet, because I often do not know if I'm going to need it, or what props/state will go in there until I'm done writing it. It also becomes troublesome to delete the placeholder if you don't want it_
 
 ```js
-useEffect(() => {
-  
-})
+useEffect(() => {});
 ```
 
+#### `rfeus` or `rfes` &ndash; `R`eact `f`unctional component with `e`xport after and `u`se`S`tate setup
 
-#### `rfeus` or `rfes` &ndash; React component with export after and `useState` setup
-*__Note__: this snippet takes the `state` placeholder and captializes the `setState` counterpart using snippet transforms. Just type whatever your `state` variable is and press "Tab" to activate the transform and move on to the next placeholder.*
+_**Note**: this snippet takes the `state` placeholder and captializes the `setState` counterpart using snippet transforms. Just type whatever your `state` variable is and press "Tab" to activate the transform and move on to the next placeholder._
 
-*__Note of Note__: I can't get this to work with the "Vim" extension, not matter how hard I try. Sorry :(* 
+_**Note of Note**: I can't get this to work with the "Vim" extension, not matter how hard I try. Sorry :(_
 
 ```js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Module = () => {
-  const [state, setState] = useState()
+  const [state, setState] = useState();
 
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
 export default Module;
 ```
 
 ---
 
-#### `rfc` &ndash; React functional component
+#### `rfc` &ndash; `R`eact `f`unctional `c`omponent
 
 ```js
 const Module = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 ```
 
 ---
 
-#### `rfpe` &ndash; React functional component with PropTypes and export after
+#### `rfpe` &ndash; `R`eact `f`unctional component with `P`ropTypes and `e`xport after
 
 ```js
-import React from 'react';
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const Module = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-Module.propTypes = {
-
-}
+Module.propTypes = {};
 
 export default Module;
 ```
 
-#### `pt` &ndash; PropTypes object
+#### `pt` &ndash; `P`rop`T`ypes object
+
 Useful if you have already created a component and decide you need Proptypes after. Uses the filename as the default for `Module`.
-*__Note:__: VSCode snippets do not autocomplete during placeholders, so you'll want to hit escape after tabbing inside of the object*
+_**Note:**: VSCode snippets do not autocomplete during placeholders, so you'll want to hit escape after tabbing inside of the object_
 
 ```js
-Module.propTypes = {
-
-}
+Module.propTypes = {};
 ```
 
-
 ---
-#### `cdu` &ndash; React: componentDidUpdate
+
+#### `cdu` &ndash; React: `c`omponent`D`id`U`pdate
 
 ```js
 componentDidUpdate(prevProps, prevState) {
@@ -259,7 +244,7 @@ componentDidUpdate(prevProps, prevState) {
 
 ---
 
-#### `cdm` &ndash; React: componentDidMount
+#### `cdm` &ndash; React: `c`omponent`D`id`M`ount
 
 ```js
 componentDidMount() {
@@ -269,7 +254,7 @@ componentDidMount() {
 
 ---
 
-#### `cdml` &ndash; React: componentDidMount with log
+#### `cdml` &ndash; React: `c`omponent`D`id`M`ount with `l`og
 
 ```js
 componentDidMount() {
@@ -279,7 +264,7 @@ componentDidMount() {
 
 ---
 
-#### `cdmlc` &ndash; React: componentDidMount with log (color)
+#### `cdmlc` &ndash; React: `c`omponent`D`id`M`ount with `l`og (`c`olor)
 
 ```js
 componentDidMount() {
@@ -289,7 +274,7 @@ componentDidMount() {
 
 ---
 
-#### `scp` &ndash; Styled Components: props callback
+#### `scp` &ndash; `S`tyled `C`omponents: `p`rops callback
 
 ```js
 ${props => props.};
@@ -297,7 +282,7 @@ ${props => props.};
 
 ---
 
-#### `sct` &ndash; Styled Components: theme callback
+#### `sct` &ndash; `S`tyled `C`omponents: `t`heme callback
 
 ```js
 ${({ theme }) => theme.};
@@ -307,142 +292,169 @@ ${({ theme }) => theme.};
 
 #### PropType snippets:
 
-| Prefix  | Output                         |
-| ------- | ------------------------------ |
-| `pta`   | PropTypes.array                |
-| `ptar`  | PropType.array.isRequired      |
-| `ptb`   | PropType.bool                  |
-| `ptbr`  | PropType.bool.isRequired       |
-| `ptel`  | PropType.element               |
-| `ptelr` | PropType.element.isRequired    |
-| `ptf`   | PropType.func                  |
-| `ptfr`  | PropType.func.isRequired       |
-| `ptnd`  | PropType.node                  |
-| `ptndr` | PropType.node.isRequired       |
-| `ptn`   | PropType.number                |
-| `ptnr`  | PropType.number.isRequired     |
-| `pto`   | PropType.object                |
-| `ptor`  | PropType.object.isRequired     |
-| `pts`   | PropType.string                |
-| `ptsr`  | PropType.string.isRequired     |
-| `ptsh`   | PropType.shape({})            |
-| `ptshr`  | PropType.shape({}).isRequired |
+| Prefix  | Output                        |
+| ------- | ----------------------------- |
+| `pta`   | PropTypes.array               |
+| `ptar`  | PropType.array.isRequired     |
+| `ptb`   | PropType.bool                 |
+| `ptbr`  | PropType.bool.isRequired      |
+| `ptel`  | PropType.element              |
+| `ptelr` | PropType.element.isRequired   |
+| `ptf`   | PropType.func                 |
+| `ptfr`  | PropType.func.isRequired      |
+| `ptnd`  | PropType.node                 |
+| `ptndr` | PropType.node.isRequired      |
+| `ptn`   | PropType.number               |
+| `ptnr`  | PropType.number.isRequired    |
+| `pto`   | PropType.object               |
+| `ptor`  | PropType.object.isRequired    |
+| `pts`   | PropType.string               |
+| `ptsr`  | PropType.string.isRequired    |
+| `ptsh`  | PropType.shape({})            |
+| `ptshr` | PropType.shape({}).isRequired |
 
 ---
 
-#### `des` &ndash; Testing `describe` block
+#### `des` &ndash; Testing `des`cribe block
 
 ```js
-describe('', () => {})
+describe("", () => {});
 ```
 
 ---
 
-#### `tit` &ndash; Testing `it` block
+#### `tit` &ndash; `T`esting `it` block
 
 ```js
-it('', () => {})
+it("", () => {});
 ```
 
 ---
 
-#### `expss` &ndash; Testing expect to match snapshot
+#### `expss` &ndash; Testing `exp`ect to match `s`nap`s`hot
 
 `expect().toMatchSnapshot()`
 
 ---
 
-#### `expte` &ndash; Testing expect to equal
+#### `expte` or `exp==` &ndash; Testing `exp`ect `t`o `e`qual
 
 `expect().toEqual()`
 
 ---
 
-#### `expte` &ndash; Testing expect to be
+#### `exptb` &ndash; Testing `exp`ect `t`o `b`e
 
 `expect().toBe()`
 
 ---
 
-#### `expte` &ndash; Testing expect to be null
+#### `exptbn` &ndash; Testing `exp`ect `to `b`e `n`ull
 
 `expect().toBeNull()`
 
 ---
 
-#### `shal` &ndash; Enzyme shallow mount component
+#### `shal` &ndash; Enzyme `shal`low mount component
 
 `const component = shallow(<Component />`
 
 ---
 
-#### `shalp` &ndash; Enzyme shallow mount component with premade props object
+#### `shalp` &ndash; Enzyme `shal`low mount component with premade `p`rops object
 
 `const component = shallow(<Component {...props} />`
 
 ---
 
-#### `mnt` &ndash; Enzyme full mount component
+#### `mnt` &ndash; Enzyme full `m`ou`nt` component
 
 `const component = mount(<Component />`
 
 ---
 
-#### `mntp` &ndash; Enzyme full mount component with premade props object
+#### `mntp` &ndash; Enzyme full `m`ou`nt` component with premade `p`rops object
 
 `const component = mount(<Component {...props} />`
 
 ---
 
-#### `rtlbs` &ndash; React Testing Library: Bootstrap
+#### `rtlbs` &ndash; `R`eact `T`esting `L`ibrary: `B`oot`s`trap
 
 ```js
-import React from 'react'
-import { render } from '@testing-library/react'
+import React from "react";
+import { render } from "@testing-library/react";
 
-import TestComponent from '.'
+import TestComponent from ".";
 
-describe('TestComponent', () => {
-  test('should render', () => {
-    const { container } = render(
-      <TestComponent></TestComponent>
-    )
+describe("TestComponent", () => {
+  test("should render", () => {
+    const { container } = render(<TestComponent></TestComponent>);
 
-    expect(container).toMatchSnapshot()
-  })
-})
+    expect(container).toMatchSnapshot();
+  });
+});
 ```
 
 ---
 
-#### `rtlss` &ndash; React Testing Library: Snapshot
+#### `rtlss` &ndash; `R`eact `T`esting `L`ibrary: `S`nap`s`hot
+
 `expect(container).toMatchSnapshot()`
 
 ---
 
-#### `tst` &ndash; Testing: test block
+#### `tst` &ndash; Testing: `t`e`st` block
+
 ```js
-  test('', () => {
-    
-  })
+test("", () => {});
 ```
 
 ---
 
-#### `sbc` &ndash; Storybook Component
+#### `sbc` &ndash; `S`tory`b`ook `C`omponent
+
 Quick story setup for a component in the same directory as the story.
+
 ```js
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import Component from '.'
+import Component from ".";
 
-storiesOf('Components|Component', module).add('default', () => (
+storiesOf("Components|Component", module).add("default", () => (
   <Component></Component>
-))
+));
 ```
+
 ---
+
+## Typescript Snippets
+
+#### `sbc` &ndash; `s`tory`b`ook `c`omponent
+
+Quick story setup for a component in the same directory as the story.
+
+```tsx
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+
+import { Example } from './'
+
+export default {
+  title: 'Components/Example',
+  component: Example,
+} as ComponentMeta<typeof Example>
+
+const Template: ComponentStory<typeof Example> = (args) => <Example {...args} />
+
+export const Default = Template.bind({})
+Default.args = {
+  children: 'I am the Example Component',
+}
+```
+
 ---
 
 ## Release Notes
+
 See [Changelog](./CHANGELOG.md)
