@@ -2,9 +2,10 @@
 
 ![](https://vsmarketplacebadge.apphb.com/version/jimmydc.js--snippet-good.svg)
 
-## 1.6.0 Release - React Hook snippets for `useState` and `useEffect`, PropTypes bugfixes
+## Newest Release: v1.7.0 - Typescript Support!
+---
 
-## Features
+# Features
 
 A collection of customized snippets intended for personal use. I've gathered and modified some of them from existing packages and created the rest.
 
