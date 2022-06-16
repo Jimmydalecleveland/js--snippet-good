@@ -68,6 +68,22 @@
   "React: function component with export after": {
     "prefix": "rfe",
     "body": [
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\treturn (",
+      "\t\t<${3:div}>",
+      "\t\t\t$4",
+      "\t\t</${3:div}>",
+      "\t)",
+      "}",
+      "",
+      "export default $1",
+      ""
+    ],
+    "description": "React Function Component with export after declaration"
+  },
+  "React: import react, function component and export default after": {
+    "prefix": "rfie",
+    "body": [
       "import * as React from 'react'",
       "",
       "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
