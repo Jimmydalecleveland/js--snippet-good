@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.7.1] - 2022-06-16
+
+### Fixed
+- React import removed from `rfe` for typescriptreact, and `rfie` added to support previous behavior. This is due to all the .tsx snippets not importing React by default because best practice is to use the newer `jsx` transpiler that is separate from React, thus no import is needed to render JSX on it's own.
+
 ## [1.7.0] - 2022-06-14
 
 ### Added
